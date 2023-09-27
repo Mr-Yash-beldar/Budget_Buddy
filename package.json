@@ -1,0 +1,16 @@
+{
+  "name": "budget_buddy",
+  "version": "1.0.0",
+  "description": "Budget buddy is a personal finance manager web app which helps to track your expences",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yashodip Beldar",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
