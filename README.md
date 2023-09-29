@@ -1,5 +1,7 @@
+![Contributors](https://img.shields.io/github/contributors/Mr-Yash-beldar/Budget_Buddy?label=Contributors&color=brightgreen)
 
-![Contributors](https://img.shields.io/static/v1?label=Contributors&message=5&color=brightgreen)[contributors-url]
+
+<hr>
 
 <h1 style="color: #9EDDFF;">BudgetBuddy</h1>
 <div style="text-align:center;">

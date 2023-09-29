@@ -12,23 +12,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
-
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Run the badge generation script and store the badge URL in an environment variable
-        id: badge
-        run: |
-          badge_url=$(python .github/scripts/generate_badge.py)
-          echo "::set-output name=badge_url::$badge_url"  # Store badge URL as an output
-
       - name: Update the README with the badge URL
         run: |
-          sed -i "s|!\[Contributors\](.*github\.com)|![Contributors](${{ steps.badge.outputs.badge_url }})|" README.md
+          sed -i "s|!\[Contributors\](.*color=brightgreen)|![Contributors](https://img.shields.io/github/contributors/Mr-Yash-beldar/Budget_Buddy?label=Contributors&color=brightgreen)|" README.md
           git add README.md
           git commit -m "Update contributors badge"
           git push
