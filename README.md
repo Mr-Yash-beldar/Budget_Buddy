@@ -1,7 +1,5 @@
 
-![Contributors](https://img.shields.io/static/v1?label=Contributors&message=5&color=brightgreen)
-
-
+![Contributors](https://img.shields.io/static/v1?label=Contributors&message=5&color=brightgreen)[contributors-url]
 
 <h1 style="color: #9EDDFF;">BudgetBuddy</h1>
 <div style="text-align:center;">
@@ -60,3 +58,4 @@ git clone https://github.com/aditi166/Budget_Buddy.git
 cd Budget_Buddy
 npm install
 
+[contributors-url]: https://github.com/Mr-Yash-beldar/Budget_Buddy/graphs/contributors
