@@ -1,5 +1,6 @@
 
-[![Contributors][contributors-shield]][contributors-url] 
+![Contributors](https://img.shields.io/static/v1?label=Contributors&message=5&color=brightgreen)
+
 
 
 <h1 style="color: #9EDDFF;">BudgetBuddy</h1>
