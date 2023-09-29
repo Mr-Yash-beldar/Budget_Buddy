@@ -20,13 +20,15 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Run the badge generation script
-        run: python .github/scripts/generate_badge.py  # Update this path if needed
-
-      - name: Update the README
+      - name: Run the badge generation script and store the badge URL in an environment variable
+        id: badge
         run: |
           badge_url=$(python .github/scripts/generate_badge.py)
-          sed -i "s|!\[Contributors\](.*github\.com)|![Contributors]($badge_url)|" README.md
+          echo "::set-output name=badge_url::$badge_url"  # Store badge URL as an output
+
+      - name: Update the README with the badge URL
+        run: |
+          sed -i "s|!\[Contributors\](.*github\.com)|![Contributors](${{ steps.badge.outputs.badge_url }})|" README.md
           git add README.md
           git commit -m "Update contributors badge"
           git push
