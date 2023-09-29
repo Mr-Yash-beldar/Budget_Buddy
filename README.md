@@ -51,13 +51,10 @@ Overall, "BudgetBuddy" aims to simplify personal finance management, promote res
 </ul>
 <p>Stay tuned for these exciting changes!</p>
 
-<h2>Installation</h2>
+## Thanks to all the Contributors ❤️
 
-Clone the BudgetBuddy repository and install the necessary dependencies:
+<a href = "https://github.com/Mr-Yash-beldar/Budget_Buddy/graphs/contributors">
 
-```bash
-git clone https://github.com/aditi166/Budget_Buddy.git
-cd Budget_Buddy
-npm install
+  <img src = "https://contrib.rocks/image?repo=Mr-Yash-beldar/Budget_Buddy"/>
 
-[contributors-url]: https://github.com/Mr-Yash-beldar/Budget_Buddy/graphs/contributors
+</a>
