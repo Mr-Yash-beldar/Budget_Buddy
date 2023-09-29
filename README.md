@@ -1,6 +1,6 @@
 <h1 style="color: #9EDDFF;">BudgetBuddy</h1>
 <div style="text-align:center;">
-<img src="image-1.png" alt="Budget Buddy" width="200">
+<img src="./images/image.png" alt="Budget Buddy" width="200">
 </div>
 <br>
 
@@ -18,9 +18,10 @@ Overall, "BudgetBuddy" aims to simplify personal finance management, promote res
 
 <hr><h2>Features</h2>
 <div align="center">
-<img src="image-6.png" alt="Budget Buddy" width="175">
-<img src="image-5.png" alt="Budget Buddy" width="150">
-<img src="image-4.png" alt="Budget Buddy" width="160">
+<img src="./images/image-1.png" alt="Budget Buddy" width="160">
+<img src="./images/image-2.png" alt="Budget Buddy" width="150">
+<img src="./images/image-3.png" alt="Budget Buddy" width="175">
+
 </div>
 
 - <strong>Secured Information</strong>: Utilizing JWT authentication, BudgetBuddy ensures the security and privacy of your financial data. Register and log in with confidence, knowing your information is protected.
