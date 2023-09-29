@@ -1,3 +1,10 @@
+
+[![Contributors][contributors-shield]][contributors-url] 
+[![Forks][forks-shield]][forks-url] 
+[![Stargazers][stars-shield]][stars-url] 
+[![Issues][issues-shield]][issues-url] 
+![Hireable](https://cdn.rawgit.com/hiendv/hireable/master/styles/default/yes.svg) 
+
 <h1 style="color: #9EDDFF;">BudgetBuddy</h1>
 <div style="text-align:center;">
 <img src="./images/image.png" alt="Budget Buddy" width="200">
