@@ -1,0 +1,32 @@
+name: Update Contributors Badge
+
+on:
+  schedule:
+    - cron: "0 * * * *"  # Run every hour (adjust as needed)
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run the badge generation script
+        run: python .github/scripts/generate_badge.py  # Update this path if needed
+
+      - name: Update the README
+        run: |
+          badge_url=$(python .github/scripts/generate_badge.py)
+          sed -i "s|!\[Contributors\](.*github\.com)|![Contributors]($badge_url)|" README.md
+          git add README.md
+          git commit -m "Update contributors badge"
+          git push

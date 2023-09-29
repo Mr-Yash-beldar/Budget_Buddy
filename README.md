@@ -1,9 +1,6 @@
 
 [![Contributors][contributors-shield]][contributors-url] 
-[![Forks][forks-shield]][forks-url] 
-[![Stargazers][stars-shield]][stars-url] 
-[![Issues][issues-shield]][issues-url] 
-![Hireable](https://cdn.rawgit.com/hiendv/hireable/master/styles/default/yes.svg) 
+
 
 <h1 style="color: #9EDDFF;">BudgetBuddy</h1>
 <div style="text-align:center;">
@@ -62,11 +59,3 @@ git clone https://github.com/aditi166/Budget_Buddy.git
 cd Budget_Buddy
 npm install
 
-[contributors-shield]: https://img.shields.io/github/contributors/javitocor/Weather-App-JS.svg?style=flat-square
-[contributors-url]: https://github.com/javitocor/Weather-App-JS/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/javitocor/Weather-App-JS.svg?style=flat-square
-[forks-url]: https://github.com/javitocor/Weather-App-JS/network/members
-[stars-shield]: https://img.shields.io/github/stars/javitocor/Weather-App-JS.svg?style=flat-square
-[stars-url]: https://github.com/javitocor/Weather-App-JS/stargazers
-[issues-shield]: https://img.shields.io/github/issues/javitocor/Weather-App-JS.svg?style=flat-square
-[issues-url]: https://github.com/javitocor/Weather-App-JS/issues
