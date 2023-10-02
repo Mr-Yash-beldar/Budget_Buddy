@@ -1,17 +1,23 @@
 const express=require("express");
 const dotenv =require("dotenv");
+const connectDB =require("./config/database");
+const userRoutes=require("./routes/userRoutes");
+const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
 
-const connectDB =require("./config/database.js");
-
+const app = express(); 
 dotenv.config();
-
 connectDB();
 
-const app = express(); // main thing
+app.use(express.json());
 
-  app.get("/", (req, res) =>
+app.get("/", (req, res) =>
     res.send("Server is Running")
-  );
+);
+
+app.use('/api/users',userRoutes);
+app.use(notFound);
+app.use(errorHandler);
+
 
 const PORT = process.env.PORT || 5000;
 
