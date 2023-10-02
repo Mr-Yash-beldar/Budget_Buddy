@@ -1,7 +1,7 @@
-const jwt =require("jsonwebtoken");
+const harsh =require("jsonwebtoken");
 
 const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.SecretKey, {
+  return harsh.sign({ id }, process.env.SecretKey, {
     expiresIn: "7d",
   });
 };
