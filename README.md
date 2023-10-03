@@ -41,8 +41,8 @@ Overall, "BudgetBuddy" aims to simplify personal finance management, promote res
 
 - <strong>Savings Goals</strong>: Set and track savings goals to help you achieve your financial objectives.
 
-<hr><h2>Getting Started</h2>
-<h3>Coming Soon...</h3>
+<hr><h2>Coming Soon...</h2>
+
 <p><strong>Exciting Updates Ahead:</strong> We're currently working on several new features and improvements for our project. Here's a sneak peek:</p>
 <ul>
   <li>Enhanced functionality</li>
