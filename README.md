@@ -1,4 +1,4 @@
-[![Contributors](https://img.shields.io/github/contributors/Mr-Yash-beldar/Budget_Buddy?label=Contributors&color=brightgreen)](https://github.com/Mr-Yash-beldar/Budget_Buddy/graphs/contributors)
+[![Contributors](https://img.shields.io/github/contributors/Mr-Yash-beldar/Budget_Buddy?label=Contributors&color=brightgreen)]([https://github.com/Mr-Yash-beldar/Budget_Buddy/graphs/contributors](https://contrib.rocks/image?repo=Mr-Yash-beldar/Budget_Buddy))
 
 
 <hr>
