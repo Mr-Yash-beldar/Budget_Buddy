@@ -54,5 +54,6 @@ Overall, "BudgetBuddy" aims to simplify personal finance management, promote res
 ## Thanks to all the Contributors ❤️
 
 <a href = "https://github.com/Mr-Yash-beldar/Budget_Buddy/graphs/contributors">
-  <img src="[https://contrib.rocks/image?repo=Mr-Yash-beldar/Budget_Buddy" height="250px](https://contrib.rocks/image?repo=Mr-Yash-beldar/Budget_Buddy)https://contrib.rocks/image?repo=Mr-Yash-beldar/Budget_Buddy" width="400px">
+  <img src="https://contrib.rocks/image?repo=Mr-Yash-beldar/Budget_Buddy" alt="Contributer" width="100%">
+<!--   <img src="[https://contrib.rocks/image?repo=Mr-Yash-beldar/Budget_Buddy" height="250px](https://contrib.rocks/image?repo=Mr-Yash-beldar/Budget_Buddy)" width="400px"> -->
 </a>
