@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d9ace8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    background-color: #30005a;
+    color: #fff;
+    padding: 5px;
+
+}
+
+hr.colorhr{
+    border: none;
+    height: 2px;
+    width: 800px;
+    background-color: #5a1193; 
+    margin: 10px 0; 
+}
+
+
+/* stylesaving.css */
+/* Add this to your existing CSS file or create a new one */
+.delete-button {
+    float: right;
+    margin-left: 480px;
+  }
+  
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    color:#fcf9f9;
+}
+h2{
+    color: #673AB7;
+}
+h3{
+    text-align: center;
+    color: #30005a;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #d2add8;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 48%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #673AB7;
+    border-radius: 5px;
+}
+
+button {
+    width: 25%;
+    background-color: #673AB7;
+    color: #fff;
+    border: none;
+    margin-left: 315px;
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #512DA8;
+}
