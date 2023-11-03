@@ -1,4 +1,4 @@
-[![Contributors](https://img.shields.io/github/contributors/Mr-Yash-beldar/Budget_Buddy?label=Contributors&color=brightgreen)](https://github.com/Mr-Yash-beldar/Budget_Buddy/graphs/contributors)
+[![Contributors](https://img.shields.io/github/contributors/Mr-Yash-beldar/Budget_Buddy?label=Contributors&color=brightgreen)]([https://github.com/Mr-Yash-beldar/Budget_Buddy/graphs/contributors](https://contrib.rocks/image?repo=Mr-Yash-beldar/Budget_Buddy))
 
 
 <hr>
@@ -41,8 +41,8 @@ Overall, "BudgetBuddy" aims to simplify personal finance management, promote res
 
 - <strong>Savings Goals</strong>: Set and track savings goals to help you achieve your financial objectives.
 
-<hr><h2>Getting Started</h2>
-<h3>Coming Soon...</h3>
+<hr><h2>Coming Soon...</h2>
+
 <p><strong>Exciting Updates Ahead:</strong> We're currently working on several new features and improvements for our project. Here's a sneak peek:</p>
 <ul>
   <li>Enhanced functionality</li>
@@ -54,7 +54,5 @@ Overall, "BudgetBuddy" aims to simplify personal finance management, promote res
 ## Thanks to all the Contributors ❤️
 
 <a href = "https://github.com/Mr-Yash-beldar/Budget_Buddy/graphs/contributors">
-
-  <img src = "https://contrib.rocks/image?repo=Mr-Yash-beldar/Budget_Buddy"/>
-
+  <img src="https://contrib.rocks/image?repo=Mr-Yash-beldar/Budget_Buddy" alt="Contributer" width="300px">
 </a>
