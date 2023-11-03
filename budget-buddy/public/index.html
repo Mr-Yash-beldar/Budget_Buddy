@@ -39,7 +39,11 @@
       <link rel="shortcut icon" href="images/favicon.png" type="">
     
       <title> ARDHY Project </title>
-    
+      <style>
+        html{
+          scroll-behavior: smooth;
+        }
+      </style>
       <!-- bootstrap core css -->
       <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
     
@@ -53,11 +57,27 @@
       <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
     
       <!-- Custom styles for this template -->
-      <link href="assets/css/style.css" rel="stylesheet" />
+      <link href="assets/css/Landingstyle.css" rel="stylesheet" />
       <!-- responsive style -->
       <link href="assets/css/responsive.css" rel="stylesheet" />
     
-    
+    <!--Login head-->
+
+    <head>
+      <meta charset="utf-8">
+      <title>Transparent Login Form UI</title>
+      <link rel="stylesheet" href="style.css">
+     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+
+    <!-- Dashboard head -->
+<!-- 
+    <head>
+      <meta charset="utf-8">
+     
+      <link rel="stylesheet" href="Dashboardstyle.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    </head> -->
 
       <!-- jQery --> 
 <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
@@ -74,12 +94,58 @@
  <!-- Google Map --> 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
 </script>
-<!-- End Google Map --> 
+<script>
+  $('.carousel').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplay: true,
+        autoplayTimeOut: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            0:{
+                items: 1,
+                nav: false
+            },
+            600:{
+                items: 2,
+                nav: false
+            },
+            1000:{
+                items: 3,
+                nav: false
+            }
+        }
+    });
+</script>
+<!-- End Google Map -->
+
+<!--Login Js-->
+
+<script>
+  const pass_field = document.querySelector('.pass-key');
+  const showBtn = document.querySelector('.show');
+  showBtn.addEventListener('click', function(){
+   if(pass_field.type === "password"){
+     pass_field.type = "text";
+     showBtn.textContent = "HIDE";
+     showBtn.style.color = "#3498db";
+   }else{
+     pass_field.type = "password";
+     showBtn.textContent = "SHOW";
+     showBtn.style.color = "#222";
+   }
+  });
+</script>
+
+
+
 
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
