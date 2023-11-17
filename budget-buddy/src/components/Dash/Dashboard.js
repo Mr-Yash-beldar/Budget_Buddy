@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from './bg.jpg'
-import { faBars, faTimes, faBalanceScale, faDollarSign, faPiggyBank, faStream, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+// import Image from './bg.jpg'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Body = styled.div`
   input[type="checkbox"] {
@@ -51,9 +51,7 @@ const SidebarHeader = styled.header`
   color: #fff;
 `;
 
-const LogoImage = styled.img`
-  max-width: 100px; // Set the maximum width of the image
-`; 
+
 
 const Ul = styled.ul`
   list-style: none;
@@ -99,34 +97,34 @@ function Dashboard() {
         </SidebarHeader>
         <Ul>
           <Li>
-            <a href="#">
+            
               {/* <i className="fas fa-balance-scale"></i> */}
               <NavLink to="/dashboard">Budget</NavLink>
-            </a>
+          
           </Li>
           <Li>
-            <a href="#">
+            
               <i className="fas fa-dollar-sign"></i>
               <NavLink to="/expenses">Expenses</NavLink>
-            </a>
+           
           </Li>
           <Li>
-            <a href="#">
+            
               <i className="fas fa-piggy-bank"></i>
               <NavLink to="/savings">Savings</NavLink>
-            </a>
+         
           </Li>
           <Li>
-            <a href="#">
+            
               <i className="fas fa-stream"></i>
               <NavLink to="/history">History</NavLink>
-            </a>
+           
           </Li>
           <Li>
-            <a href="#">
+            
               <i className="fas fa-sign-out-alt"></i>
               <NavLink to="/">Logout</NavLink>
-            </a>
+           
           </Li>
         </Ul>
       </Sidebar>

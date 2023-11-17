@@ -1,142 +1,170 @@
-import React, { useState } from 'react'
-import '../components/css/loginstyle.css' 
-import { Link } from 'react-router-dom'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useState } from "react";
+import "../components/css/loginstyle.css";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import Spinner from "./Spinner/Spinner"
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Register() {
+  const [userData, setUserData] = useState({
+    username: "",
+    email: "",
+    password: "",
+    cpassword: "",
+  });
 
-    const [inpval, setInpval] = useState({
-        fname: "",
-        email: "",
-        password: "",
-        cpassword: ""
-    });
+  const chnageHandler = (event) => {
+    // console.log(e.target.value);
+    const { name, value } = event.target;
 
+    setUserData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
-    const setVal = (e) => {
-        // console.log(e.target.value);
-        const { name, value } = e.target;
+  const addUserdata = async (e) => {
+    e.preventDefault();
 
-        setInpval(() => {
-            return {
-                ...inpval,
-                [name]: value
-            }
-        })
-    };
+    const { username, email, password, cpassword } = userData;
 
-    const addUserdata = async (e) => {
-        e.preventDefault();
+    if (username === "") {
+      toast.warning("Name is required!", {
+        position: "top-center",
+      });
+    } else if (email === "") {
+      toast.error("email is required!", {
+        position: "top-center",
+      });
+    } else if (!email.includes("@")) {
+      toast.warning("includes @ in your email!", {
+        position: "top-center",
+      });
+    } else if (password === "") {
+      toast.error("password is required!", {
+        position: "top-center",
+      });
+    } else if (password.length < 6) {
+      toast.error("password must be 6 char!", {
+        position: "top-center",
+      });
+    } else if (cpassword === "") {
+      toast.error("Confirm password is required!", {
+        position: "top-center",
+      });
+    } else if (cpassword.length < 6) {
+      toast.error("confirm password must be 6 char!", {
+        position: "top-center",
+      });
+    } else if (password !== cpassword) {
+      toast.error("Passwords are not matching!", {
+        position: "top-center",
+      });
+    } else {
+      try {
+        const config = {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        };
+        
 
-        const { fname, email, password, cpassword } = inpval;
+        // Make an Axios POST request to your backend
+        const response = await axios.post(
+          "/api/users",
+          {
+            username,
+            email,
+            password,
+          },
+          config
+        );
+        localStorage.setItem("userData", JSON.stringify.response);
 
-        if (fname === "") {
-            toast.warning("fname is required!", {
-                position: "top-center"
-            });
-        } else if (email === "") {
-            toast.error("email is required!", {
-                position: "top-center"
-            });
-        } else if (!email.includes("@")) {
-            toast.warning("includes @ in your email!", {
-                position: "top-center"
-            });
-        } else if (password === "") {
-            toast.error("password is required!", {
-                position: "top-center"
-            });
-        } else if (password.length < 6) {
-            toast.error("password must be 6 char!", {
-                position: "top-center"
-            });
-        } else if (cpassword === "") {
-            toast.error("cpassword is required!", {
-                position: "top-center"
-            });
+        console.log(response.data.status);
+
+        if (response.status === 201) {
+          toast.success("Registration Successfully done 😃!", {
+            position: "top-center",
+          });
+          setUserData({ name: "", email: "", password: "", cpassword: "" });
         }
-        else if (cpassword.length < 6) {
-            toast.error("confirm password must be 6 char!", {
-                position: "top-center"
-            });
-        } else if (password !== cpassword) {
-            toast.error("pass and Cpass are not matching!", {
-                position: "top-center"
-            });
-        } else {
-            console.log("user registration succesfully done");
-
-
-            const data = await fetch("/register", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    fname, email, password, cpassword
-                })
-            });
-
-            const res = await data.json();
-            console.log(res.status);
-
-            if (res.status === 201) {
-                toast.success("Registration Successfully done 😃!", {
-                    position: "top-center"
-                });
-                setInpval({ ...inpval, fname: "", email: "", password: "", cpassword: "" });
-            }
-        }
+      
+      } catch (error) {
+        console.error("Error during registration:", error);
+        toast.error("Registration failed. Please try again.");
+      }
     }
-
+  };
 
   return (
     <div>
-        <body>
-    <div class="bg-img">
-      <div class="content">
-        <header>Signup Form</header>
-        <form >
-          <div class="field">
-            <span class="fa fa-user"></span>
-            <input type="text" onChange={setVal} value={inpval.fname} name="fname" required placeholder="Username"/>
+      <div className="bg-img">
+        <div className="content">
+          <header>Signup Form</header>
+          <form onSubmit={addUserdata}>
+            <div className="field">
+              <span className="fa fa-user"></span>
+              <input
+                type="text"
+                onChange={chnageHandler}
+                value={userData.username}
+                name="username"
+                required
+                placeholder="Username"
+              />
+            </div>
+            <div className="field space">
+              <span className="fa fa-user"></span>
+              <input
+                type="text"
+                onChange={chnageHandler}
+                value={userData.email}
+                name="email"
+                required
+                placeholder="Email"
+              />
+            </div>
+            <div className="field space">
+              <span className="fa fa-lock"></span>
+              <input
+                type="password"
+                className="pass-key"
+                value={userData.password}
+                onChange={chnageHandler}
+                name="password"
+                required
+                placeholder=" New Password"
+              />
+              <span className="show">SHOW</span>
+            </div>
+            <div className="field space">
+              <span className="fa fa-lock"></span>
+              <input
+                type="password"
+                className="pass-key"
+                value={userData.cpassword}
+                onChange={chnageHandler}
+                name="cpassword"
+                required
+                placeholder="Confirm New Password"
+              />
+              <span className="show">SHOW</span>
+            </div>
+
+            <div className="field space">
+              <input type="submit" value="SUBMIT" />
+            </div>
+          </form>
+          <ToastContainer />
+          <div className="login">
+            Login Here !<Link to="/dashboard">click here</Link>
           </div>
-          <div class="field space">
-            <span class="fa fa-user"></span>
-            <input type="text" onChange={setVal} value={inpval.email} name="email" required placeholder="Email"/>
-          </div>
-          <div class="field space">
-            <span class="fa fa-lock"></span>
-            <input type="password" class="pass-key" value={inpval.password} onChange={setVal}  name='password'required placeholder=" New Password"/>
-            <span class="show">SHOW</span>
-          </div>
-          <div class="field space">
-            <span class="fa fa-lock"></span>
-            <input type="password" class="pass-key" value={inpval.cpassword} onChange={setVal} name='cpassword' required placeholder="Confirm New Password"/>
-            <span class="show">SHOW</span>
-          </div>
-          
-          <div class="field space">
-            <input type="submit" onClick={addUserdata} value="SUBMIT"/>
-          </div>
-        </form>
-        <ToastContainer />
-        <div class="login">Login Here !
-            <a> <Link to="/dashboard">click here</Link></a>
         </div>
-        
       </div>
-      
     </div>
-
-    
-
-
-  </body>
-      
-    </div>
-  )
+  );
 }
 
-export default Register
+export default Register;

@@ -1,5 +1,7 @@
+
 import LandingPage from './components/LandingPage.js'
 import Login from './components/Login';
+import "./index.css"; 
 import Register from './components/Register';
 import Dashboard from './components/Dash/Dashboard';
 import Expenses from './components/Expences/ExpencesDash';
@@ -7,8 +9,6 @@ import Savings from './components/savings/SavingDash';
 import History from './components/History/HistoryDash';
 import {Routes,Route} from 'react-router-dom'
 
-
- 
 function App() {
   return (
   <>
