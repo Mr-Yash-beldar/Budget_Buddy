@@ -1,0 +1,23 @@
+.footer_section {
+    background-color: #1b012a;
+    color: #fff;
+    padding: 1px;
+  }
+  
+  #displayYear {
+    color: #ff9900;
+  }
+  
+  .footer_text {
+    color: #ccc;
+    margin: 0;
+  }
+  
+  .footer_link {
+    color: #ff9900;
+    text-decoration: none;
+  }
+  
+  .footer_link:hover {
+    text-decoration: underline;
+  }
