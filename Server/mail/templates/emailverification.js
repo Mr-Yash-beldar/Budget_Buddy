@@ -1,7 +1,6 @@
 const otpTemplate = (otp) => {
     return `<!DOCTYPE html>
-	<html>
-	
+	<html>	
 	<head>
 		<meta charset="UTF-8">
 		<title>OTP Verification Email</title>
@@ -68,8 +67,7 @@ const otpTemplate = (otp) => {
 			}
 		</style>
 	
-	</head>
-	
+	</head>	
 	<body>
 		<div class="container">
             <img src="https://8upload.com/image/65436e8380fd2/mailheader-removebg-preview.png" alt="Budget Buddy" border="0"></a>
