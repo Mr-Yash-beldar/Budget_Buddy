@@ -1,0 +1,230 @@
+.team_section {
+    text-align: center;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 50px 20px 50px;
+    overflow: hidden;
+  }
+  
+  .team_section .heading_container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .team_section .team_container {
+    display: flex;
+    justify-content: center;
+    overflow-x:none; 
+    padding-bottom:20px;
+  }
+  
+  .team_section .team_container .box {
+    padding: 35px 20px 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.1s;
+    background: linear-gradient(to right, #dbaef1, #3c0064);
+    width: 250px;
+    margin: 0 100px;
+  }
+  
+  .team_section .team_container .box .img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .team_section .team_container .box .img-box img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+  }
+  
+  .team_section .team_container .box .detail-box {
+    margin: 15px 20px;
+  }
+  
+  .team_section .team_container .box .detail-box h5 {
+    color: #1b012a;
+    font-weight: 600;
+  }
+  
+  .team_section .team_container .box .social_box {
+    padding: 10px 15px 20px 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .team_section .team_container .box .social_box a {
+    color: #ffffff;
+    font-size: 22px;
+  }
+  
+  .team_section .team_container .box .social_box a:hover {
+    color: #9c00f0;
+  }
+
+  .team_section .btn-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 45px;
+  }
+  
+  .team_section .btn-box a {
+    display: inline-block;
+    padding: 10px 45px;
+    background-color: #9c00f0;
+    color: #ffffff;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none;
+  }
+  .team_section .btn-box a:hover {
+    background-color: #3d6aff;
+  }
+  
+  
+  
+  * teams section styling */
+  .teams .title::after{
+      content: "My Best Friends";
+  }
+  .teams .carousel .card{
+      background: #222;
+      border-radius: 6px;
+      padding: 25px 35px;
+      text-align: center;
+      overflow: hidden;
+      transition: all 0.3s ease;
+  }
+  .teams .carousel .card:hover{
+      background: crimson;
+  }
+  .teams .carousel .card .box{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+  }
+  .teams .carousel .card:hover .box{
+      transform: scale(1.05);
+  }
+  .teams .carousel .card .text{
+      font-size: 25px;
+      font-weight: 500;
+      margin: 10px 0 7px 0;
+  }
+  .teams .carousel .card img{
+      height: 150px;
+      width: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid crimson;
+      transition: all 0.3s ease;
+  }
+  .teams .carousel .card:hover img{
+      border-color: #fff;
+  }
+  .owl-dots{
+      text-align: center;
+      margin-top: 20px;
+  }
+  .owl-dot{
+      height: 13px;
+      width: 13px;
+      margin: 0 5px;
+      outline: none!important;
+      border-radius: 50%;
+      border: 2px solid crimson!important;
+      transition: all 0.3s ease;
+  }
+  .owl-dot.active{
+      width: 35px;
+      border-radius: 14px;
+  }
+  .owl-dot.active,
+  .owl-dot:hover{
+      background: crimson!important;
+  }
+
+  button {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  
+  button:hover {
+    background: #3d6aff;
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  
+  button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+  
