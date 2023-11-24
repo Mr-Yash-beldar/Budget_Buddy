@@ -1,8 +1,8 @@
 
 import LandingPage from './components/LandingPage.js'
-import Login from './components/Login';
+import Login from './components/Login/Login.js';
 import "./index.css"; 
-import Register from './components/Register';
+import Register from './components/Register/Register.js';
 import Dashboard from './components/Dash/Dashboard';
 import Expenses from './components/Expences/ExpencesDash';
 import Savings from './components/savings/SavingDash';

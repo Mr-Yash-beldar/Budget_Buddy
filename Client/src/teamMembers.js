@@ -47,6 +47,18 @@ const teamMembers = [
 
     imageSrc: "https://i.postimg.cc/52ZgqHFr/profile-pic.jpg",
   },
+  {
+    name: "Aditi Shah",
+    job: "Frontend Developer",
+    socialMedia: {
+      geekforgeeks: "https://auth.geeksforgeeks.org/user/shahadi66qq",
+      linkedin: "https://www.linkedin.com/in/aditi-shah-a41188258/",
+      leetcode: "https://leetcode.com/aditi_166/",
+      github: "https://github.com/aditi166",
+    },
+
+    imageSrc: "https://i.postimg.cc/qqT6Y7Jv/IMG-AditiShah.jpg",
+}
 ];
 
 export default teamMembers;

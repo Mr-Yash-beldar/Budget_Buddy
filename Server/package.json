@@ -4,7 +4,7 @@
   "description": "Budget buddy is a personal finance manager web app which helps to track your expences",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./Server/server.js"
+    "start": "nodemon ./server.js"
   },
   "author": "Yashodip Beldar",
   "license": "ISC",

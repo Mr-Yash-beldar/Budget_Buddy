@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import "../components/css/loginstyle.css";
-import { Link } from "react-router-dom";
+import "./Login/loginstyle.css";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Spinner from "./Spinner/Spinner"
+import Spinner from "../Spinner/Spinner"
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Register() {
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false); // [false, function
   const [userData, setUserData] = useState({
     username: "",
     email: "",
@@ -68,8 +70,7 @@ function Register() {
             "Content-Type": "application/json",
           },
         };
-        
-
+        setLoading(true);
         // Make an Axios POST request to your backend
         const response = await axios.post(
           "/api/users",
@@ -82,18 +83,23 @@ function Register() {
         );
         localStorage.setItem("userData", JSON.stringify.response);
 
-        console.log(response.data.status);
+        setLoading(false);
 
         if (response.status === 201) {
           toast.success("Registration Successfully done 😃!", {
             position: "top-center",
           });
+          navigate("/login");
           setUserData({ name: "", email: "", password: "", cpassword: "" });
         }
       
       } catch (error) {
         console.error("Error during registration:", error);
+        toast.error("Registration failed. Please try again.", {
+          position: "top-center",}
+        );
         toast.error("Registration failed. Please try again.");
+        setLoading(false);
       }
     }
   };
@@ -101,6 +107,7 @@ function Register() {
   return (
     <div>
       <div className="bg-img">
+        {!loading?(
         <div className="content">
           <header>Signup Form</header>
           <form onSubmit={addUserdata}>
@@ -162,6 +169,9 @@ function Register() {
             Login Here !<Link to="/dashboard">click here</Link>
           </div>
         </div>
+        ):(
+          <Spinner/>
+        )}
       </div>
     </div>
   );

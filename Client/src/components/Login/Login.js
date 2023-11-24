@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "../components/css/loginstyle.css";
+import "./loginstyle.css";
 import { NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
-import Spinner from "./Spinner/Spinner"
-import { set } from "mongoose";
+import Spinner from "../Spinner/Spinner"
+
 
 function Login() {
   const [loading, setLoading] = useState(false); // [false, function

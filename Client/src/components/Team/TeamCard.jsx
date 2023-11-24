@@ -13,7 +13,7 @@ const TeamCard = ({ member }) => {
           <p>{member.job}</p>
         </div>
         <div className="social_box">
-          <a href={member.socialMedia.geekforgeeks}>
+          <a href={member.socialMedia.geekforgeeks}  target="blank">
             <i aria-hidden="true">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,13 +30,13 @@ const TeamCard = ({ member }) => {
               </svg>
             </i>
           </a>
-          <a href={member.socialMedia.github}>
+          <a href={member.socialMedia.github} target="blank">
             <i className="fa fa-github" aria-hidden="true"></i>
           </a>
-          <a href={member.socialMedia.linkedin}>
-            <i className="fa fa-linkedin" aria-hidden="true"></i>
+          <a href={member.socialMedia.linkedin} target="blank">
+            <i className="fa fa-linkedin " aria-hidden="true"></i>
           </a>
-          <a href={member.socialMedia.leetcode}>
+          <a href={member.socialMedia.leetcode} target="blank">
             <i className="fa" aria-hidden="true">
             <img src="https://static-00.iconduck.com/assets.00/leetcode-icon-430x512-6l72chsk.png"  
             width="21px" height="21px" alt="leetcode"
